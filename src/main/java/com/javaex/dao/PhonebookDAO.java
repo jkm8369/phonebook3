@@ -90,17 +90,15 @@ public class PhonebookDAO {
 			rs = pstmt.executeQuery();
 			
 			//4. 결과처리
-			while(rs.next()) {//반복한다
-				//ResultSet에서 각각의 값을 꺼내서 자바 변수에 담는다
+			while(rs.next()) {
+				
 				int personId = rs.getInt("person_id");
 				String name = rs.getString("name");
 				String hp = rs.getString("hp");
 				String company = rs.getString("company");
-				
-				//VO로 묶어준다
+			
 				PersonVO personVO = new PersonVO(personId, name, hp, company);
 				
-				//묶여진VO를 리스트에 추가한다
 				personList.add(personVO);
 			}
 			
@@ -116,10 +114,10 @@ public class PhonebookDAO {
 	
 	
 	
-	// 1명 정보 가져오기
+	
 	public PersonVO personSelectOne(int no) {
 		
-		//VO준비 (1명정보만 담아야 하니 리스트 필요없음)
+		
 		PersonVO personVO = null;
 		
 		this.connect();
@@ -145,13 +143,13 @@ public class PhonebookDAO {
 			//4. 결과처리
 			rs.next();
 			
-			//ResultSet에서 각각의 값을 꺼내서 자바 변수에 담는다
+	
 			int personId = rs.getInt("person_id");
 			String name = rs.getString("name");
 			String hp = rs.getString("hp");
 			String company = rs.getString("company");
 			
-			//VO로 묶어준다
+			
 			personVO = new PersonVO(personId, name, hp, company);
 			
 		} catch (SQLException e) {
@@ -166,7 +164,7 @@ public class PhonebookDAO {
 	
 	
 	
-	//사람(주소) 등록
+
 	public int personInsert(PersonVO personVO) {
 		System.out.println("personInsert()");
 		int count = -1;
@@ -201,7 +199,7 @@ public class PhonebookDAO {
 		return count;
 	}
 	
-	//사람(주소) 삭제
+	
 	public int personDelete(int no) {
 		System.out.println("personDelete");
 		
@@ -237,7 +235,7 @@ public class PhonebookDAO {
 	}
 	
 	
-	//사람(주소) 수정
+	
 	public int personUpdate(PersonVO personVO) {
 		System.out.println("personUpdate");
 		

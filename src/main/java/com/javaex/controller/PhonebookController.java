@@ -72,7 +72,7 @@ public class PhonebookController extends HttpServlet {
 			// http://localhost:8080/phonebook2/pbc?action=list 
 			
 			//리다이렉트
-			WebUtil.redirect(request, response, "${pageContext.request.contextPath}/pbc?action=list");
+			WebUtil.redirect(request, response, "/pbook3/pbc?action=list");
 			
 		}else if("delete".equals(action)) {
 			System.out.println("삭제");
@@ -85,7 +85,7 @@ public class PhonebookController extends HttpServlet {
 			phonebookDAO.personDelete(no);
 			
 			//리다이렉트 action=list
-			WebUtil.redirect(request, response, "${pageContext.request.contextPath}/pbc?action=list");
+			WebUtil.redirect(request, response, "/pbook3/pbc?action=list");
 			
 		}else if("mform".equals(action)) {
 			System.out.println("수정폼");

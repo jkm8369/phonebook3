@@ -36,7 +36,7 @@
 			<input type="hidden" name="action" value="write">
 			<br>
 			
-			<<button>등록</button>>
+			<button>등록</button>
 		</form>
 	</body>
 	

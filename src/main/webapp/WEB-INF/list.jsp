@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
+
 <!DOCTYPE html>
 
 <html>
@@ -43,7 +44,7 @@
 							<a href="${pageContext.request.contextPath}/pbc?action=delete&no=${personVO.personId}">
 								[삭제] ${personVO.personId}
 							</a>
-						</td>   <!-- 원래 버튼으로 해야된다 js필요 안배워서 a태그로 구현 -->
+						</td>   <!-- 원래 버튼으로 해야된다 js필요 안배워서 a 태그로 구현 -->
 					<tr>	
 						
 				</tbody>
